@@ -65,6 +65,28 @@ public class HelloApplication extends Application {
         label4.setLayoutX(320);
         label4.setLayoutY(120);
 
+        Rectangle room5 = new Rectangle(400, 50, 120, 160);
+        room5.setFill(Color.GREY);
+        room5.setStroke(Color.BLACK);
+        Label label5 = new Label("Room 5");
+        label5.setLayoutX(420);
+        label5.setLayoutY(130);
+
+        Rectangle room6 = new Rectangle(200, 210, 160, 150);
+        room6.setFill(Color.GREY);
+        room6.setStroke(Color.BLACK);
+        Label label6 = new Label("Room 6");
+        label6.setLayoutX(300);
+        label6.setLayoutY(250);
+
+        Rectangle room7 = new Rectangle(360, 210, 160, 150);
+        room7.setFill(Color.GREY);
+        room7.setStroke(Color.BLACK);
+        Label label7 = new Label("Room 7");
+        label7.setLayoutX(470);
+        label7.setLayoutY(250);
+
+
 
     }
 }
