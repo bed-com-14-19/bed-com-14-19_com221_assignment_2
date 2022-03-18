@@ -2,20 +2,18 @@ package com.example.assignment2;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.Group;
 import javafx.scene.layout.GridPane;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.scene.Group;
 
 import javafx.scene.control.Label;
 
 
-public class HelloApplication extends Application {
+public class MainRoom extends Application {
     public static void main(String[] args) {
         launch(args);
     }
@@ -85,8 +83,50 @@ public class HelloApplication extends Application {
         Label label7 = new Label("Room 7");
         label7.setLayoutX(470);
         label7.setLayoutY(250);
+        Button room1btn = new Button("Room1 ON/OFF");
+
+        room1btn.setOnAction(e -> {
+            if(room1.getFill() == Color.GREY) {
+                room1.setFill(Color.YELLOW);
+            }
+            else {
+                room1.setFill(Color.GREY);
+            }
+        });
+
+        Group pane = new Group();
+        pane.getChildren().addAll(room1, label1, room2,label2, room3, label3, room4,label4, room5,label5, room6,label6, room7,label7);
+
+        GridPane gridPane = new GridPane();
+        gridPane.setAlignment(Pos.CENTER);
+        gridPane.setStyle("-fx-padding:15,15,15,15");
+        gridPane.setVgap(5);
+        gridPane.setHgap(5);
 
 
+        Button button1 = new Button("AllRooms ON/OFF");
+        button1.setOnAction(e -> {
+            if(room1.getFill() == Color.GREY || room2.getFill() == Color.GREY || room3.getFill() == Color.GREY|| room4.getFill() == Color.GREY|| room5.getFill() == Color.GREY|| room6.getFill() == Color.GREY|| room7.getFill() == Color.GREY) {
+                room1.setFill(Color.YELLOW);
+                room2.setFill(Color.GREEN);
+                room3.setFill(Color.ORANGE);
+                room4.setFill(Color.ORANGE);
+                room5.setFill(Color.YELLOW);
+
+                room6.setFill(Color.RED);
+                room7.setFill(Color.YELLOW);
+            }
+            else {
+                room1.setFill(Color.GREY);
+                room2.setFill(Color.GREY);
+                room3.setFill(Color.GREY);
+                room4.setFill(Color.GREY);
+                room5.setFill(Color.GREY);
+
+                room6.setFill(Color.GREY);
+                room7.setFill(Color.GREY);
+            }
+        });
 
     }
 }
