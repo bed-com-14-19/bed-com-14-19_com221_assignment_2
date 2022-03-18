@@ -3,6 +3,7 @@ package com.example.assignment2;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.control.Button;
@@ -126,7 +127,100 @@ public class MainRoom extends Application {
                 room6.setFill(Color.GREY);
                 room7.setFill(Color.GREY);
             }
+        }); Button button2 = new Button("Room1&2 ON/OFF");
+        button2.setOnAction(e -> {
+            if(room2.getFill() == Color.GREY || room1.getFill() == Color.GREY) {
+                room2.setFill(Color.GREEN);
+                room1.setFill(Color.YELLOW);
+            }
+            else {
+                room2.setFill(Color.GREY);
+                room1.setFill(Color.GREY);
+            }
+
         });
+        Button button3 = new Button("Room1 ON/OFF");
+        button3.setOnAction(e -> {
+            if(room1.getFill() == Color.GREY) {
+                room1.setFill(Color.YELLOW);
+            }
+            else {
+                room1.setFill(Color.GREY);
+            }
+        });
+        Button button4 = new Button("Room2 ON/OFF");
+        button4.setOnAction(e -> {
+            if(room2.getFill() == Color.GREY) {
+                room2.setFill(Color.GREEN);
+            }
+            else {
+                room2.setFill(Color.GREY);
+            }
+        });
+        Button button5 = new Button("Room3 ON/OFF");
+        button5.setOnAction(e -> {
+            if(room3.getFill() == Color.GREY) {
+                room3.setFill(Color.ORANGE);
+            }
+            else {
+                room3.setFill(Color.GREY);
+            }
+        });
+        Button button6 = new Button("Room4 ON/OFF");
+        button6.setOnAction(e -> {
+            if(room4.getFill() == Color.GREY) {
+                room4.setFill(Color.ORANGE);
+            }
+            else {
+                room4.setFill(Color.GREY);
+            }
+        });
+        Button button7 = new Button("Room5 ON/OFF");
+        button7.setOnAction(e -> {
+            if(room5.getFill() == Color.GREY) {
+                room5.setFill(Color.YELLOW);
+            }
+            else {
+                room5.setFill(Color.GREY);
+            }
+        });
+        Button button8 = new Button("Room6 ON/OFF");
+        button8.setOnAction(e -> {
+            if(room6.getFill() == Color.GREY) {
+                room6.setFill(Color.RED);
+            }
+            else {
+                room6.setFill(Color.GREY);
+            }
+        });
+        Button button9 = new Button("Room7 ON/OFF");
+        button9.setOnAction(e -> {
+            if(room7.getFill() == Color.GREY) {
+                room7.setFill(Color.YELLOW);
+            }
+            else {
+                room7.setFill(Color.GREY);
+            }
+        });
+
+        GridPane.setConstraints(button1,2,4);
+        GridPane.setConstraints(button2,2,6);
+        GridPane.setConstraints(button3,2,8);
+        GridPane.setConstraints(button4,8,4);
+        GridPane.setConstraints(button5,8,6);
+        GridPane.setConstraints(button6,8,8);
+        GridPane.setConstraints(button7,14,4);
+        GridPane.setConstraints(button8,14,6);
+        GridPane.setConstraints(button9,14,8);
+
+
+
+        gridPane.getChildren().addAll(button1,button2,button3,button4,button5,button6,button7,button8,button9);
+
+        BorderPane borderPane = new BorderPane();
+        borderPane.setTop(hBox);
+        borderPane.setCenter(pane);
+        borderPane.setBottom(gridPane);
 
     }
 }
