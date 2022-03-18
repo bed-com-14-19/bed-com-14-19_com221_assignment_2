@@ -3,6 +3,7 @@ package com.example.assignment2;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
+import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Rectangle;
@@ -221,6 +222,10 @@ public class MainRoom extends Application {
         borderPane.setTop(hBox);
         borderPane.setCenter(pane);
         borderPane.setBottom(gridPane);
+        Scene scene = new Scene( borderPane,500, 600);
+        primaryStage.setTitle("MyHouse");
+        primaryStage.setScene(scene);
+        primaryStage.show();
 
     }
 }
